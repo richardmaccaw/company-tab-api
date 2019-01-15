@@ -11,8 +11,8 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def create
-        @company = Company.find_or_create_by(domain: user_params[:domain])
-        @user = User.new(uid: user_params[:id], company_id: @company.id)
+        @company = Company.find_or_create_by(domain: params[:domain])
+        @user = User.find_or_create_by(uid: user_params[:uid], company_id: @company.id)
         if @user.save
             render json: @user
         else
@@ -23,6 +23,7 @@ class Api::V1::UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:name, :domain, :id)
+        params.require(:user).permit(:name, :uid, :domain)
     end
+
 end
