@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :show, :create]
       resources :announcements, only: [:index, :show, :create, :destroy, :update]
+      resources :links, only: [:show, :create, :destroy, :update]
       get 'users/find_or_create_user/:id', :to => 'users#find_or_create_user'
     end
   end
