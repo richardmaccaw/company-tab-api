@@ -26,4 +26,6 @@ class Api::V1::UsersController < ApplicationController
         params.require(:user).permit(:name, :uid, :domain)
     end
 
+# finish
+
 end
