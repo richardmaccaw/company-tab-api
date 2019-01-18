@@ -1,10 +1,5 @@
 class Api::V1::TimezonesController < ApplicationController
 
-    def index
-        @timezones = Timezone.all
-        render json: @timezones
-    end
-
     def create
         @timezone = Timezone.new(timezone_params)
         if @timezone.save
@@ -15,7 +10,7 @@ class Api::V1::TimezonesController < ApplicationController
     end
 
     def update
-        @timezone = timezone.find_by(id: params[:id])
+        @timezone = Timezone.find_by(id: params[:id])
         if @timezone.update(timezone_params)
             render json: @timezone
         else
