@@ -20,3 +20,5 @@ a1 = Announcement.create(title: 'New feature out', description:'There is a new f
 a2 = Announcement.create(title: 'Erika hired as CEO', description:'Jokes', date: '15th October 2018', published: true, company: gmail)
 a3 = Announcement.create(title: 'Alex joins the company', description:'as intern', date: '15th October 2018', published: true, company: whoishiring)
 
+t1 = Timezone.create(zone: 'Etc/Greenwich', name: 'London office', company: gmail)
+t2 = Timezone.create(zone: 'Europe/Amsterdam', name: 'Berlin office', company: gmail)
