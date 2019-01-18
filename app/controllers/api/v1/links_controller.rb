@@ -1,10 +1,5 @@
 class Api::V1::LinksController < ApplicationController
 
-    def show
-        @link = Link.find_by(id: params[:id])
-        render json: @link
-    end
-
     def create
         @link = Link.new(link_params)
         if @link.save

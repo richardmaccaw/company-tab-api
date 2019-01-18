@@ -1,17 +1,4 @@
 class Api::V1::AnnouncementsController < ApplicationController
-    def index
-        @announcements = Announcement.all
-        render json: @announcements
-    end
-
-    def show
-        @user = User.find_by(uid: params[:id])
-        if @user
-            render json: @user
-        else
-            render json: {error: 'User not found. Can\'t get user announcements'}, status: 404
-        end
-    end
 
     def create
         @announcement = Announcement.new(announcement_params)
