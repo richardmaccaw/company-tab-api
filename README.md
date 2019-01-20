@@ -1,24 +1,26 @@
-# README
+## CompanyTab
+(in progress)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+CompanyTab makes it simple to spread information to your employees. It's a chrome extension and web app that shows company announcements, quick links and timezones. Once you've installed the chrome extension and logged in with your work gmail address, every new tab will show important company information.
 
-Things you may want to cover:
+#### Problem
+As companies grow in size, it becomes increasingly difficult to spread information around. Did all of HR know a new feature was released? Were the sales team aware of a new marketing product video? Did you just hire a lead developer? Information can quickly fall between the gaps in departments. CompanyTab takes over your employees new tab page to highlight the latest company announcements and more.
 
-* Ruby version
+### Screenshots
+New tab page
+![](public/CompanyTab.png)
 
-* System dependencies
 
-* Configuration
+Edit announcements page
+![](public/CompanyTabAnnouncements.png)
 
-* Database creation
 
-* Database initialization
+Edit links and timezones page
+![](public/CompanyTabSettings.png)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Tech
+* React frontend
+* Material-ui for styling
+* Firebase and Google OAuth for authentication
+* Ruby on Rails backend
